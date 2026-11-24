@@ -1,0 +1,21 @@
+{
+  "name": "sr-films-jhansi",
+  "version": "1.0.0",
+  "description": "SR Films Jhansi - Luxury Wedding Photography & Cinematic Films Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 3000",
+    "serve": "npx serve ."
+  },
+  "keywords": [
+    "photography",
+    "wedding-photography",
+    "cinematography",
+    "jhansi",
+    "orchha",
+    "pre-wedding",
+    "films"
+  ],
+  "author": "SR Films Jhansi",
+  "license": "MIT"
+}

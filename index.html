@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SR Films Jhansi | Crafting Love, Capturing Life</title>
+  <meta name="description" content="SR Films Jhansi - Premier wedding photographers & cinematic filmmakers in Jhansi, Orchha and Bundelkhand. Royal weddings, pre-wedding shoots, teasers, and luxury albums.">
+  <link rel="icon" type="image/png" href="images/sr-logo-icon.png">
+  <link rel="apple-touch-icon" href="images/sr-logo-icon.png">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#d4af37',
+            'gold-light': '#f3e5ab',
+            'gold-dark': '#aa820a',
+            surface: '#11131a',
+            'surface-card': '#171a24'
+          },
+          fontFamily: {
+            heading: ['Cinzel', 'serif'],
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Theme Pre-loader to Prevent Flash -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('sr_theme');
+      if (savedTheme === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
+
+  <!-- Custom Luxury Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#090a0f] text-slate-100 antialiased selection:bg-gold/30 selection:text-white">
+
+  <!-- ========================================================================
+       TOP NOTIFICATION BAR / ANNOUNCEMENT
+       ======================================================================== -->
+  <div class="bg-gradient-to-r from-[#1a1306] via-[#2c1d07] to-[#1a1306] border-b border-gold/30 py-2 px-4 text-center text-xs text-gold-light font-medium tracking-wide flex items-center justify-center gap-2">
+    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gold shrink-0"></i>
+    <span>Now accepting Wedding & Pre-Wedding bookings for <strong>2026-2027 Season</strong> across Jhansi, Orchha & Destination Venues</span>
+    <a href="#booking" class="underline ml-2 text-white hover:text-gold transition-colors font-bold">Check Dates &rarr;</a>
+  </div>
+
+  <!-- ========================================================================
+       STICKY NAVIGATION BAR
+       ======================================================================== -->
+  <nav id="main-nav" class="nav-blur sticky top-0 z-50 px-4 md:px-8 py-3.5 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Logo & Brand -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="h-10 md:h-12 flex items-center justify-center">
+          <img 
+            src="images/sr-logo-gold.png" 
+            alt="SR Films Jhansi - Crafting Love, Capturing Life" 
+            class="h-9 md:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+          />
+        </div>
+        <div class="hidden sm:block border-l border-gold/30 pl-3">
+          <span class="block text-[11px] tracking-[0.2em] text-white font-heading uppercase font-bold">
+            JHANSI
+          </span>
+          <span class="block text-[9px] tracking-[0.15em] text-gold uppercase font-medium">
+            Bundelkhand
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="hidden lg:flex items-center gap-7 text-xs font-semibold uppercase tracking-wider text-slate-300">
+        <a href="#portfolio" class="hover:text-gold transition-colors">Portfolio</a>
+        <a href="#stories" class="hover:text-gold transition-colors">Wedding Stories</a>
+        <a href="#prewedding" class="hover:text-gold transition-colors">Pre-Wedding Spots</a>
+        <a href="#packages" class="hover:text-gold transition-colors">Packages & Pricing</a>
+        <a href="#reviews" class="hover:text-gold transition-colors">Client Love</a>
+        <a href="#contact" class="hover:text-gold transition-colors">Studio</a>
+      </div>
+
+      <!-- Action Buttons & Theme Switcher -->
+      <div class="flex items-center gap-2.5">
+        
+        <!-- Light / Dark Mode Toggle Button -->
+        <button 
+          id="theme-toggle-btn" 
+          class="theme-toggle-btn" 
+          title="Toggle Light / Dark Mode" 
+          aria-label="Toggle Light and Dark Mode">
+          <i data-lucide="moon" class="w-4 h-4 theme-icon-moon"></i>
+          <i data-lucide="sun" class="w-4 h-4 theme-icon-sun hidden"></i>
+        </button>
+
+        <div class="hidden sm:flex items-center gap-2.5">
+          <a href="https://wa.me/919452187654?text=Hello%20SR%20Films%20Jhansi,%20I%20would%20like%20to%20inquire%20about%20wedding%20dates%20and%20photography%20packages." target="_blank" class="btn-whatsapp text-xs py-2 px-4">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+          </a>
+          <a href="#booking" class="btn-gold text-xs py-2 px-5">
+            <i data-lucide="calendar" class="w-4 h-4"></i> Book Date
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 text-slate-300 hover:text-gold" aria-label="Toggle Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- Mobile Slide-out Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 top-[72px] bg-[#090a0f]/98 backdrop-blur-2xl z-40 p-6 flex flex-col justify-between border-t border-gold/20">
+      <div class="flex flex-col space-y-5 text-base font-semibold tracking-wider uppercase">
+        <a href="#portfolio" class="mobile-nav-link text-slate-200 hover:text-gold py-2 border-b border-white/5 flex items-center justify-between">
+          <span>Portfolio</span> <i data-lucide="chevron-right" class="w-4 h-4 text-gold"></i>
+        </a>
+        <a href="#stories" class="mobile-nav-link text-slate-200 hover:text-gold py-2 border-b border-white/5 flex items-center justify-between">
+          <span>Wedding Stories</span> <i data-lucide="chevron-right" class="w-4 h-4 text-gold"></i>
+        </a>
+        <a href="#prewedding" class="mobile-nav-link text-slate-200 hover:text-gold py-2 border-b border-white/5 flex items-center justify-between">
+          <span>Pre-Wedding Spots</span> <i data-lucide="chevron-right" class="w-4 h-4 text-gold"></i>
+        </a>
+        <a href="#packages" class="mobile-nav-link text-slate-200 hover:text-gold py-2 border-b border-white/5 flex items-center justify-between">
+          <span>Packages & Pricing</span> <i data-lucide="chevron-right" class="w-4 h-4 text-gold"></i>
+        </a>
+        <a href="#reviews" class="mobile-nav-link text-slate-200 hover:text-gold py-2 border-b border-white/5 flex items-center justify-between">
+          <span>Testimonials</span> <i data-lucide="chevron-right" class="w-4 h-4 text-gold"></i>
+        </a>
+        <a href="#contact" class="mobile-nav-link text-slate-200 hover:text-gold py-2 border-b border-white/5 flex items-center justify-between">
+          <span>Jhansi Studio</span> <i data-lucide="chevron-right" class="w-4 h-4 text-gold"></i>
+        </a>
+      </div>
+
+      <div class="space-y-3 pt-6 border-t border-white/10">
+        
+        <!-- Mobile Drawer Theme Switcher -->
+        <div class="flex items-center justify-between p-3 rounded-xl bg-black/20 border border-white/10 mb-2">
+          <span class="text-xs uppercase tracking-wider text-slate-300 font-semibold flex items-center gap-2">
+            <i data-lucide="sun-moon" class="w-4 h-4 text-gold"></i> Theme Mode
+          </span>
+          <button id="mobile-theme-toggle-btn" class="btn-outline-gold text-xs py-1.5 px-3">
+            <span id="mobile-theme-label">Switch to Light Mode</span>
+          </button>
+        </div>
+
+        <a href="#booking" class="mobile-nav-link btn-gold w-full text-center py-3.5">
+          <i data-lucide="calendar" class="w-4 h-4"></i> Book Your Wedding Date
+        </a>
+        <a href="https://wa.me/919452187654" target="_blank" class="btn-whatsapp w-full text-center py-3.5">
+          <i data-lucide="message-circle" class="w-4 h-4"></i> Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================================================================
+       HERO SHOWREEL SECTION
+       ======================================================================== -->
+  <header class="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
+    <!-- Cinematic Background Image with Parallax & Gradients -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=2000&q=85" 
+        alt="Royal Indian Wedding in Orchha Jhansi" 
+        class="hero-bg-img w-full h-full object-cover object-center filter brightness-[0.4] scale-105 transform animate-pulse duration-[10000ms]"
+      />
+      <div class="hero-overlay absolute inset-0 bg-gradient-to-t from-[#090a0f] via-[#090a0f]/60 to-transparent"></div>
+      <div class="absolute inset-0 bg-radial-gradient"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
+      
+      <!-- Official Studio Logo Showcase -->
+      <div class="flex flex-col items-center justify-center mb-6">
+        <img 
+          src="images/sr-logo-white.png" 
+          alt="SR Films - Crafting Love, Capturing Life" 
+          class="hero-logo-img h-16 sm:h-20 md:h-24 w-auto object-contain drop-shadow-[0_10px_35px_rgba(212,175,55,0.4)] animate-pulse duration-[6000ms]"
+        />
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/60 border border-gold/40 text-gold-light text-xs uppercase tracking-widest font-semibold mt-4 shadow-2xl backdrop-blur-md">
+          <i data-lucide="crown" class="w-4 h-4 text-gold"></i>
+          <span>Jhansi's Most Celebrated Wedding Cinema Studio</span>
+        </div>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold font-heading text-white leading-tight tracking-wide mb-6">
+        Capturing <span class="text-gold-gradient">Royal Moments</span> & <br class="hidden sm:inline">
+        Timeless Love Stories
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="max-w-2xl mx-auto text-base sm:text-lg text-slate-300 font-serif italic leading-relaxed mb-10">
+        Every sacred ritual, every stolen glance, and every joyous celebration — immortalized into bespoke cinematic films across Jhansi, Orchha, Bundelkhand & Destination Weddings.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <a href="#portfolio" class="btn-gold w-full sm:w-auto text-sm py-4 px-8">
+          <i data-lucide="eye" class="w-4 h-4"></i> Explore Our Portfolio
+        </a>
+        <a href="#booking" class="btn-outline-gold w-full sm:w-auto text-sm py-4 px-8">
+          <i data-lucide="calendar-check" class="w-4 h-4"></i> Check Date Availability
+        </a>
+        <a href="https://wa.me/919452187654?text=Hi%20SR%20Films%20Jhansi!%20I%20am%20planning%20a%20wedding%20and%20need%20details." target="_blank" class="btn-whatsapp w-full sm:w-auto text-sm py-4 px-6">
+          <i data-lucide="message-square" class="w-4 h-4"></i> WhatsApp Instant
+        </a>
+      </div>
+
+      <!-- Live Counters -->
+      <div id="hero-stats" class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-8 border-t border-white/10">
+        <!-- Rendered dynamically via js/main.js -->
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       WORK PORTFOLIO SECTION (User requested: "wok ka fortfolio ho")
+       ======================================================================== -->
+  <section id="portfolio" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="badge-gold mb-3">
+        <i data-lucide="camera" class="w-3.5 h-3.5"></i> Curated Gallery
+      </span>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-white">
+        Portfolio of <span class="text-gold-gradient">Masterpieces</span>
+      </h2>
+      <div class="gold-divider"></div>
+      <p class="text-slate-400 text-sm md:text-base font-serif italic">
+        A glimpse into royal pheras, joyful haldi splashes, emotional tears, and breathtaking sunset pre-weddings shot in high definition.
+      </p>
+
+      <!-- Category Filter Tabs -->
+      <div id="portfolio-tabs" class="flex flex-wrap items-center justify-center gap-2.5 mt-8 overflow-x-auto pb-2">
+        <!-- Injected via js/main.js -->
+      </div>
+    </div>
+
+    <!-- Portfolio Grid Container -->
+    <div id="portfolio-grid" class="portfolio-grid">
+      <!-- Injected via js/main.js -->
+    </div>
+
+    <div class="mt-12 text-center">
+      <p class="text-xs text-slate-400 mb-4">Want to see our raw uncompressed footage and luxury printed wedding albums?</p>
+      <a href="#contact" class="btn-outline-gold text-xs py-3 px-6">
+        <i data-lucide="map-pin" class="w-4 h-4"></i> Visit Our Jhansi Studio for a Private Showcase
+      </a>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       REAL WEDDING STORIES SECTION (User requested: "weddings stories")
+       ======================================================================== -->
+  <section id="stories" class="py-24 bg-gradient-to-b from-[#090a0f] via-[#11131a] to-[#090a0f] border-y border-gold/15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="badge-gold mb-3">
+          <i data-lucide="heart" class="w-3.5 h-3.5 text-gold"></i> Real Couples & Real Emotions
+        </span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-white">
+          Real <span class="text-gold-gradient">Wedding Stories</span>
+        </h2>
+        <div class="gold-divider"></div>
+        <p class="text-slate-400 text-sm md:text-base font-serif italic">
+          Every wedding is a unique cinematic chapter. Explore how we transformed these grand Bundelkhand ceremonies into eternal heirlooms.
+        </p>
+      </div>
+
+      <!-- Wedding Stories Container -->
+      <div id="stories-container" class="space-y-12">
+        <!-- Injected via js/main.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PRE-WEDDING SHOOTS & JHANSI HOTSPOTS (User requested: "prewd andall")
+       ======================================================================== -->
+  <section id="prewedding" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="badge-gold mb-3">
+        <i data-lucide="compass" class="w-3.5 h-3.5"></i> Bundelkhand Heritage Guide
+      </span>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-white">
+        Pre-Wedding <span class="text-gold-gradient">Cinematic Hotspots</span>
+      </h2>
+      <div class="gold-divider"></div>
+      <p class="text-slate-400 text-sm md:text-base font-serif italic">
+        Jhansi and Orchha are blessed with century-old forts, stone cenotaphs, and tranquil riverbanks. Here are the top dream locations we shoot at:
+      </p>
+    </div>
+
+    <!-- Pre-wedding Spots Grid -->
+    <div id="prewedding-spots" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Injected via js/main.js -->
+    </div>
+
+    <!-- Pre-wedding Consultation Banner -->
+    <div class="mt-14 p-8 rounded-2xl bg-gradient-to-r from-[#171a24] via-[#212635] to-[#171a24] border border-gold/30 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <h3 class="text-xl md:text-2xl font-bold font-heading text-white">
+          Need Pre-Wedding Styling, Outfits & Drone Permits?
+        </h3>
+        <p class="text-xs md:text-sm text-slate-300 mt-1 max-w-2xl">
+          SR Films provides complete pre-wedding support: royal gowns, vintage props, boat permissions at Betwa river, and sunrise time slots.
+        </p>
+      </div>
+      <a href="https://wa.me/919452187654?text=Hi%20SR%20Films,%20I%20want%20to%20plan%20a%20pre-wedding%20shoot%20around%20Jhansi/Orchha." target="_blank" class="btn-gold text-xs py-3.5 px-6 shrink-0">
+        <i data-lucide="sparkles" class="w-4 h-4"></i> Plan My Pre-Wedding Shoot
+      </a>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PACKAGES & PRICING
+       ======================================================================== -->
+  <section id="packages" class="py-24 bg-[#0c0d14] border-t border-gold/15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="badge-gold mb-3">
+          <i data-lucide="tag" class="w-3.5 h-3.5"></i> Clear & Transparent Pricing
+        </span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-white">
+          Wedding <span class="text-gold-gradient">Investment Packages</span>
+        </h2>
+        <div class="gold-divider"></div>
+        <p class="text-slate-400 text-sm md:text-base font-serif italic">
+          Tailored to your celebration scale. Every package includes senior artists, cinema-line gear, and guaranteed timely delivery.
+        </p>
+      </div>
+
+      <!-- Packages Grid -->
+      <div id="packages-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Injected via js/main.js -->
+      </div>
+
+      <div class="mt-12 text-center">
+        <p class="text-xs text-slate-400">
+          Need custom requirements like Destination Wedding coverage, LED Wall Live Feed, or Crane Jimmy-Jib?
+        </p>
+        <a href="#booking" class="text-gold hover:underline text-xs font-semibold mt-1 inline-block">
+          Request a Custom Tailored Quote &rarr;
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       BOOKING & INQUIRY SECTION (User requested: "booking ka option howeddings")
+       ======================================================================== -->
+  <section id="booking" class="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="luxury-card p-6 sm:p-10 md:p-12 border-gold/40 relative overflow-hidden bg-gradient-to-b from-[#14161f] to-[#0c0d14]">
+      
+      <!-- Top Decorative Accent -->
+      <div class="absolute -top-24 -right-24 w-60 h-60 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -left-24 w-60 h-60 bg-[#9e1b32]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="badge-gold mb-3">
+          <i data-lucide="calendar-heart" class="w-3.5 h-3.5"></i> Reserve Your Dates
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+          Book <span class="text-gold-gradient">SR Films Jhansi</span>
+        </h2>
+        <div class="gold-divider"></div>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Due to our signature cinematic approach, we accept a limited number of weddings per season. Lock your auspicious date early to secure our crew!
+        </p>
+      </div>
+
+      <!-- Booking Form -->
+      <form id="booking-form" class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Full Name -->
+          <div>
+            <label for="book-name" class="form-label">
+              <i data-lucide="user" class="inline w-3.5 h-3.5 mr-1"></i> Your Name (Bride / Groom / Family) *
+            </label>
+            <input 
+              type="text" 
+              id="book-name" 
+              required 
+              placeholder="e.g. Aditya Sharma / Priya Bundela" 
+              class="form-input"
+            />
+          </div>
+
+          <!-- Mobile / WhatsApp Number -->
+          <div>
+            <label for="book-phone" class="form-label">
+              <i data-lucide="phone" class="inline w-3.5 h-3.5 mr-1"></i> WhatsApp / Mobile Number *
+            </label>
+            <input 
+              type="tel" 
+              id="book-phone" 
+              required 
+              placeholder="e.g. 98765 43210" 
+              class="form-input"
+            />
+          </div>
+
+          <!-- Email Address -->
+          <div>
+            <label for="book-email" class="form-label">
+              <i data-lucide="mail" class="inline w-3.5 h-3.5 mr-1"></i> Email Address
+            </label>
+            <input 
+              type="email" 
+              id="book-email" 
+              placeholder="name@gmail.com" 
+              class="form-input"
+            />
+          </div>
+
+          <!-- Event Type -->
+          <div>
+            <label for="book-event-type" class="form-label">
+              <i data-lucide="heart" class="inline w-3.5 h-3.5 mr-1"></i> Event Type *
+            </label>
+            <select id="book-event-type" class="form-select">
+              <option value="Grand Royal Wedding (All Functions)" selected>Grand Royal Wedding (2-3 Days: Haldi, Sangeet, Wedding, Reception)</option>
+              <option value="Single Day Wedding & Reception">Single Day Wedding & Reception</option>
+              <option value="Pre-Wedding Shoot (Orchha / Jhansi)">Pre-Wedding Shoot (Orchha / Jhansi / Outstation)</option>
+              <option value="Ring Ceremony / Engagement">Ring Ceremony / Engagement</option>
+              <option value="Destination Wedding">Destination Wedding</option>
+              <option value="Maternity & Baby Shoot">Maternity & Baby Shoot</option>
+            </select>
+          </div>
+
+          <!-- Wedding Date -->
+          <div>
+            <label for="book-date" class="form-label">
+              <i data-lucide="calendar" class="inline w-3.5 h-3.5 mr-1"></i> Event Date / Start Date *
+            </label>
+            <input 
+              type="date" 
+              id="book-date" 
+              required 
+              class="form-input"
+            />
+          </div>
+
+          <!-- Number of Days -->
+          <div>
+            <label for="book-days" class="form-label">
+              <i data-lucide="clock" class="inline w-3.5 h-3.5 mr-1"></i> Duration of Functions
+            </label>
+            <select id="book-days" class="form-select">
+              <option value="1 Day">1 Day (Single Function)</option>
+              <option value="2 Days" selected>2 Days (Sangeet + Wedding)</option>
+              <option value="3 Days">3 Days (Haldi, Mehendi, Sangeet, Wedding)</option>
+              <option value="4+ Days">4+ Days (Complete Royal Festival)</option>
+            </select>
+          </div>
+
+          <!-- City / Region -->
+          <div>
+            <label for="book-city" class="form-label">
+              <i data-lucide="map-pin" class="inline w-3.5 h-3.5 mr-1"></i> Event City / Region *
+            </label>
+            <select id="book-city" class="form-select">
+              <option value="Jhansi" selected>Jhansi (Civil Lines, Sadar, Elite, Sipri, etc.)</option>
+              <option value="Orchha">Orchha (Palaces & Heritage Resorts)</option>
+              <option value="Babina">Babina</option>
+              <option value="Lalitpur">Lalitpur</option>
+              <option value="Orai / Jalaun">Orai / Jalaun</option>
+              <option value="Mauranipur">Mauranipur</option>
+              <option value="Gwalior">Gwalior</option>
+              <option value="Other Destination Venue">Other Destination Venue</option>
+            </select>
+          </div>
+
+          <!-- Package Preference -->
+          <div>
+            <label for="book-package" class="form-label">
+              <i data-lucide="package" class="inline w-3.5 h-3.5 mr-1"></i> Preferred Package
+            </label>
+            <select id="book-package" class="form-select">
+              <option value="Gold Cinematic (₹85,000)" selected>Gold Cinematic (₹85,000) - Most Popular</option>
+              <option value="Silver Classic (₹45,000)">Silver Classic (₹45,000)</option>
+              <option value="Royal Diamond Experience (₹1,45,000)">Royal Diamond Experience (₹1,45,000)</option>
+              <option value="Custom Bespoke Package">Custom Bespoke Package</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Venue Details & Vision Notes -->
+        <div>
+          <label for="book-notes" class="form-label">
+            <i data-lucide="file-text" class="inline w-3.5 h-3.5 mr-1"></i> Venue Name, Guest Count & Special Requests
+          </label>
+          <textarea 
+            id="book-notes" 
+            rows="3" 
+            placeholder="e.g. Wedding at Jhansi Club Lawns, approx 600 guests. We want cinematic drone coverage, same-day teaser for Instagram, and a pre-wedding shoot at Orchha."
+            class="form-textarea"
+          ></textarea>
+        </div>
+
+        <!-- Form Dual Actions -->
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-white/10">
+          <div class="text-xs text-slate-400 flex items-center gap-2">
+            <i data-lucide="shield-check" class="w-4 h-4 text-gold"></i>
+            <span>Your contact details are 100% confidential. No spam ever.</span>
+          </div>
+          
+          <div class="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+            <button type="button" id="btn-send-whatsapp" class="btn-whatsapp w-full sm:w-auto text-xs py-3.5 px-6">
+              <i data-lucide="message-circle" class="w-4 h-4"></i> Book via WhatsApp Directly
+            </button>
+            <button type="submit" class="btn-gold w-full sm:w-auto text-xs py-3.5 px-8">
+              <i data-lucide="send" class="w-4 h-4"></i> Submit Booking Inquiry
+            </button>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CLIENT REVIEWS & TESTIMONIALS (Jhansi Couples)
+       ======================================================================== -->
+  <section id="reviews" class="py-24 bg-[#0c0d14] border-t border-gold/15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="badge-gold mb-3">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i> 500+ Happy Couples
+        </span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-white">
+          Loved by <span class="text-gold-gradient">Bundelkhand Families</span>
+        </h2>
+        <div class="gold-divider"></div>
+        <p class="text-slate-400 text-sm md:text-base font-serif italic">
+          Hear directly from couples who trusted SR Films to capture the most meaningful moments of their lives.
+        </p>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div id="testimonials-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Injected via js/main.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       STUDIO INFO & JHANSI LOCATION
+       ======================================================================== -->
+  <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      
+      <!-- Studio Details -->
+      <div>
+        <span class="badge-gold mb-3">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Physical Studio in Jhansi
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mb-4">
+          Visit <span class="text-gold-gradient">SR Films Studio</span>
+        </h2>
+        <p class="text-sm text-slate-300 leading-relaxed mb-8">
+          We invite you and your family for a warm cup of coffee and a private cinema showreel preview. Flip through our Italian handcrafted leather albums and discuss your vision directly with our lead cinematographers.
+        </p>
+
+        <div class="space-y-5">
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-surface border border-white/5">
+            <div class="w-10 h-10 rounded-lg bg-gold/10 border border-gold/30 flex items-center justify-center text-gold shrink-0">
+              <i data-lucide="map-pin" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Studio Address</div>
+              <div class="text-sm font-medium text-white mt-0.5">
+                757/2, Bade Hanuman Mandir, Chandra Vihar Colony, Near BKD College, Jhansi - 284001, Uttar Pradesh
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-surface border border-white/5">
+            <div class="w-10 h-10 rounded-lg bg-gold/10 border border-gold/30 flex items-center justify-center text-gold shrink-0">
+              <i data-lucide="phone-call" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Direct Call & WhatsApp</div>
+              <div class="text-sm font-medium text-white mt-0.5">
+                <a href="tel:+919452187654" class="hover:text-gold transition-colors">+91 94521 87654</a> / <a href="tel:+919876543210" class="hover:text-gold transition-colors">+91 98765 43210</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-surface border border-white/5">
+            <div class="w-10 h-10 rounded-lg bg-gold/10 border border-gold/30 flex items-center justify-center text-gold shrink-0">
+              <i data-lucide="clock" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Studio Visiting Hours</div>
+              <div class="text-sm font-medium text-white mt-0.5">
+                Monday to Sunday: 10:30 AM to 8:30 PM (Prior appointment recommended)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex items-center gap-4">
+          <a href="https://wa.me/919452187654?text=Hello%20SR%20Films,%20I%20would%20like%20to%20visit%20your%20Jhansi%20studio." target="_blank" class="btn-whatsapp text-xs py-3 px-6">
+            <i data-lucide="calendar" class="w-4 h-4"></i> Schedule Studio Visit
+          </a>
+          <a href="tel:+919452187654" class="btn-outline-gold text-xs py-3 px-6">
+            <i data-lucide="phone" class="w-4 h-4"></i> Call Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Jhansi Location Map Visualizer -->
+      <div class="luxury-card p-4 rounded-2xl border-gold/30 bg-surface">
+        <div class="relative w-full h-[380px] rounded-xl overflow-hidden">
+          <iframe 
+            src="https://maps.google.com/maps?q=Bade+Hanuman+Mandir+Chandra+Vihar+Colony+BKD+College+Jhansi&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0; filter: invert(90%) hue-rotate(180deg);" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="SR Films Jhansi Location">
+          </iframe>
+          <div class="absolute bottom-4 left-4 right-4 bg-black/85 backdrop-blur-md p-4 rounded-xl border border-gold/40 flex items-center justify-between">
+            <div>
+              <div class="text-xs font-bold text-white font-heading">SR Films Jhansi Studio</div>
+              <div class="text-[11px] text-gold">Chandra Vihar Colony, Near BKD College, Jhansi</div>
+            </div>
+            <a href="https://maps.google.com/?q=Bade+Hanuman+Mandir+Chandra+Vihar+Colony+BKD+College+Jhansi" target="_blank" class="btn-gold text-[11px] py-1.5 px-3">
+              Open Maps
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FREQUENTLY ASKED QUESTIONS
+       ======================================================================== -->
+  <section id="faqs" class="py-20 bg-[#0c0d14] border-t border-gold/15">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <span class="badge-gold mb-3">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i> Got Questions?
+        </span>
+        <h2 class="text-3xl font-extrabold font-heading text-white">
+          Frequently Asked <span class="text-gold-gradient">Questions</span>
+        </h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <!-- FAQ Container -->
+      <div id="faqs-container" class="space-y-4">
+        <!-- Injected via js/main.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="bg-[#050608] border-t border-gold/20 pt-16 pb-12 px-4 sm:px-6 lg:px-8 text-slate-400">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      
+      <!-- Column 1: Studio Identity -->
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-4 mb-4">
+          <img 
+            src="images/sr-logo-gold.png" 
+            alt="SR Films Jhansi - Crafting Love, Capturing Life" 
+            class="h-12 w-auto object-contain"
+          />
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed max-w-md mb-6">
+          <strong class="text-white">Crafting Love, Capturing Life.</strong> Bundelkhand's premier wedding cinema house based in Jhansi. We believe every couple deserves to have their love story documented with raw emotion, architectural elegance, and cinematic perfection.
+        </p>
+        <div class="flex items-center gap-3">
+          <a href="https://instagram.com" target="_blank" class="w-9 h-9 rounded-full bg-surface border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all" aria-label="Instagram">
+            <i data-lucide="instagram" class="w-4 h-4"></i>
+          </a>
+          <a href="https://youtube.com" target="_blank" class="w-9 h-9 rounded-full bg-surface border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all" aria-label="YouTube">
+            <i data-lucide="youtube" class="w-4 h-4"></i>
+          </a>
+          <a href="https://wa.me/919452187654" target="_blank" class="w-9 h-9 rounded-full bg-surface border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all" aria-label="WhatsApp">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div>
+        <h4 class="text-xs uppercase tracking-widest text-gold font-bold mb-4">Navigation</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="#portfolio" class="hover:text-white transition-colors">Wedding Portfolio</a></li>
+          <li><a href="#stories" class="hover:text-white transition-colors">Real Wedding Stories</a></li>
+          <li><a href="#prewedding" class="hover:text-white transition-colors">Pre-Wedding Shoots</a></li>
+          <li><a href="#packages" class="hover:text-white transition-colors">Packages & Pricing</a></li>
+          <li><a href="#booking" class="hover:text-white transition-colors">Book Your Date</a></li>
+          <li><a href="#contact" class="hover:text-white transition-colors">Jhansi Studio Location</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Coverage Regions -->
+      <div>
+        <h4 class="text-xs uppercase tracking-widest text-gold font-bold mb-4">Coverage Areas</h4>
+        <ul class="space-y-2 text-xs">
+          <li>Jhansi (Elite, Sadar, Sipri, Civil Lines)</li>
+          <li>Orchha Heritage & Betwa Riverbanks</li>
+          <li>Gwalior Palaces & Fortresses</li>
+          <li>Lalitpur, Babina & Mauranipur</li>
+          <li>Orai, Jalaun & Kanpur</li>
+          <li>Destination Weddings Pan-India</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 gap-4">
+      <div>
+        &copy; 2026 SR Films Jhansi. All Rights Reserved. Crafted with Royal Heritage & Modern Cinema.
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="#booking" class="text-gold hover:underline">Reserve Date</a>
+        <a href="#contact" class="hover:text-slate-300">Privacy & Terms</a>
+        <a href="#" class="hover:text-slate-300">Back to Top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       FLOATING ACTION BUTTONS (WHATSAPP & PHONE CALL)
+       ======================================================================== -->
+  <div class="floating-actions">
+    <!-- WhatsApp Direct Button -->
+    <a 
+      href="https://wa.me/919452187654?text=Hello%20SR%20Films%20Jhansi!%20I%20would%20like%20to%20inquire%20about%20booking%20my%20wedding." 
+      target="_blank" 
+      class="fab-btn fab-whatsapp" 
+      title="Chat on WhatsApp"
+      aria-label="Chat on WhatsApp">
+      <i data-lucide="message-circle" class="w-6 h-6"></i>
+    </a>
+    <!-- Phone Call Button -->
+    <a 
+      href="tel:+919452187654" 
+      class="fab-btn fab-phone" 
+      title="Call SR Films Jhansi"
+      aria-label="Call SR Films Jhansi">
+      <i data-lucide="phone-call" class="w-6 h-6"></i>
+    </a>
+  </div>
+
+  <!-- ========================================================================
+       FULLSCREEN LIGHTBOX MODAL
+       ======================================================================== -->
+  <div id="lightbox-modal" class="lightbox-modal">
+    <button id="lightbox-close" class="absolute top-6 right-6 text-slate-300 hover:text-white p-2 rounded-full bg-black/60 border border-white/10 z-50">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+    <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300 hover:text-gold p-3 rounded-full bg-black/60 border border-white/10 z-50">
+      <i data-lucide="chevron-left" class="w-6 h-6"></i>
+    </button>
+    <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-300 hover:text-gold p-3 rounded-full bg-black/60 border border-white/10 z-50">
+      <i data-lucide="chevron-right" class="w-6 h-6"></i>
+    </button>
+
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Portfolio Preview" />
+      <div class="mt-4 text-center max-w-xl">
+        <div class="flex items-center justify-center gap-2 mb-1">
+          <span id="lightbox-tag" class="badge-gold">Tag</span>
+          <span id="lightbox-counter" class="text-xs text-slate-400">1 / 12</span>
+        </div>
+        <h3 id="lightbox-title" class="text-xl font-bold font-heading text-white">Title</h3>
+        <p id="lightbox-location" class="text-xs text-gold flex items-center justify-center gap-1 mt-0.5">
+          <i data-lucide="map-pin" class="w-3 h-3"></i> Location
+        </p>
+        <p id="lightbox-desc" class="text-xs text-slate-300 mt-1"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       STORY MODAL (DEEP DIVE REAL WEDDING)
+       ======================================================================== -->
+  <div id="story-modal" class="hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-xl flex items-center justify-center p-4 overflow-y-auto">
+    <div class="relative w-full max-w-4xl bg-surface border border-gold/40 rounded-2xl shadow-2xl my-8 overflow-hidden">
+      <button id="story-modal-close" class="absolute top-4 right-4 z-50 text-white p-2 rounded-full bg-black/70 hover:bg-gold hover:text-black transition-all">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div id="story-modal-content">
+        <!-- Rendered dynamically via js/main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       BOOKING CONFIRMATION SUCCESS MODAL
+       ======================================================================== -->
+  <div id="booking-success-modal" class="hidden fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex items-center justify-center p-4">
+    <div class="luxury-card max-w-md w-full p-8 text-center border-gold gold-glow-card relative">
+      <div class="w-16 h-16 rounded-full bg-gold/20 border-2 border-gold flex items-center justify-center mx-auto mb-4 text-gold">
+        <i data-lucide="check" class="w-8 h-8"></i>
+      </div>
+      <h3 class="text-2xl font-bold font-heading text-white">Booking Inquiry Received!</h3>
+      <p class="text-xs text-gold font-medium mt-1">Reference: <span id="success-ref-code" class="underline font-bold">SR-123456</span></p>
+      <p class="text-xs text-slate-300 mt-3 leading-relaxed">
+        Thank you for choosing SR Films Jhansi. Our lead cinematographer will review your dates and connect with you on WhatsApp / Phone within 2 hours.
+      </p>
+
+      <div id="success-details" class="my-5"></div>
+
+      <div class="flex flex-col gap-2">
+        <button onclick="closeSuccessModal()" class="btn-gold text-xs py-3 w-full">
+          Done & Return to Website
+        </button>
+        <a href="https://wa.me/919452187654?text=Hello%20SR%20Films%20Jhansi,%20I%20just%20submitted%20a%20booking%20inquiry%20on%20your%20website." target="_blank" class="btn-whatsapp text-xs py-3 w-full">
+          <i data-lucide="message-circle" class="w-4 h-4"></i> Notify Us on WhatsApp for Priority
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
